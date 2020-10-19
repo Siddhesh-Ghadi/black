@@ -29,6 +29,11 @@ matrix:
       python: 3.8
     - name: "3.9"
       python: 3.9-dev
+    - name: "lint"
+      python: 3.7
+      arch: ppc64le
+      env:
+        - TEST_CMD="pre-commit run --all-files --show-diff-on-failure"  
   allow_failures:
     - python: 3.9-dev
 before_deploy:
